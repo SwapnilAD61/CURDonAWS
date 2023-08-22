@@ -30,7 +30,7 @@ jobs:
             cd frontend/react-frontend
             npm install
             CI='' npm run build
-           
+        
   #deploy:
      #needs: build
    #  runs-on: self-hosted
