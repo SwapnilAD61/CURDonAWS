@@ -31,12 +31,12 @@ jobs:
             npm install
             CI='' npm run build
            
-  deploy:
-     needs: build
-     runs-on: self-hosted
-     steps:
-     - name: war file
-       run: sudo cp /home/aishwarya/githubrunner/_work/curd/curd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
+  #deploy:
+     #needs: build
+   #  runs-on: self-hosted
+    # steps:
+    # - name: war file
+      # run: sudo cp /home/aishwarya/githubrunner/_work/curd/curd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
      
     # - name: Upload artifacts
      #  uses: actions/upload-artifact@v2
@@ -45,7 +45,7 @@ jobs:
         #path: path/to/your/build/output  # Change to the path where your build artifacts are
     # - name: Deploy or other actions
       # You can add additional steps here, like deploying to a server or publishing to npm
-     - name: deploying build folder
-       run:  sudo cp -r /home/aishwarya/githubrunner/_work/curd/curd/frontend/react-frontend/build /var/www/html
+    # - name: deploying build folder
+    #   run:  sudo cp -r /home/aishwarya/githubrunner/_work/curd/curd/frontend/react-frontend/build /var/www/html
         
         
